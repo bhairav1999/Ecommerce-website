@@ -6,7 +6,7 @@ const Home = () => {
     <>
 
       <Wrapper className='test'>
-        Hello
+        Hello tesr
       </Wrapper>
     </>
   )
