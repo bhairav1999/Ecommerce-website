@@ -7,21 +7,32 @@ import Product from "./components/product/Product";
 import SingleProduct from "./components/singleProduct/SingleProduct";
 import Cart from "./components/cart/Cart";
 import ErrorPage from "./components/errorPage/ErrorPage";
+import { GlobalStyle } from "./styles/GlobalStyle";
+import { ThemeProvider } from "styled-components";
 
 function App() {
+  const theme ={
+    colors:{
+      bg:"#000"
+    }
+  }
+
   return (
     <>
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/about" element={<About />}></Route>
-          <Route path="/contact" element={<Contact />}></Route>
-          <Route path="/product" element={<Product />}></Route>
-          <Route path="/cart" element={<Cart />}></Route>
-          <Route path="/singleproduct/:id" element={<SingleProduct />}></Route>
-          <Route path="/*" element={<ErrorPage />}></Route>
-        </Routes>
-      </Router>
+      <ThemeProvider theme={theme}>
+        <Router>
+          <GlobalStyle />
+          <Routes>
+            <Route path="/" element={<Home />}></Route>
+            <Route path="/about" element={<About />}></Route>
+            <Route path="/contact" element={<Contact />}></Route>
+            <Route path="/product" element={<Product />}></Route>
+            <Route path="/cart" element={<Cart />}></Route>
+            <Route path="/singleproduct/:id" element={<SingleProduct />}></Route>
+            <Route path="/*" element={<ErrorPage />}></Route>
+          </Routes>
+        </Router>
+      </ThemeProvider>
     </>
   );
 }
