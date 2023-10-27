@@ -5,9 +5,9 @@ const Home = () => {
   return (
     <>
 
-      <Wrapper className='test'>
-        Hello tesr
-      </Wrapper>
+        {/* <Wrapper className='test'>
+          Hello tesr
+        </Wrapper> */}
     </>
   )
 };
