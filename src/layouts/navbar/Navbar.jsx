@@ -207,7 +207,7 @@ const Navbar = () => {
         </ul>
 
         {/* two button for open and close of menu */}
-        {/* <div className="mobile-navbar-btn">
+        <div className="mobile-navbar-btn">
           <CgMenu
             name="menu-outline"
             className="mobile-nav-icon"
@@ -218,7 +218,7 @@ const Navbar = () => {
             className="mobile-nav-icon close-outline"
             onClick={() => setMenuIcon(false)}
           />
-        </div> */}
+        </div>
       </div>
     </Nav>
     </>
